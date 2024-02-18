@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="showResult"> </h1>
+    <!-- This is for LG 8.4 -->
+
+    <script> 
+        // var username = prompt("Username: "); 
+        // document.write(prompt); prompt returns a string value 
+
+        var choice = 
+        prompt 
+        ("Please choose an arithmetic operation \n"  +
+        "1. addition \n" +
+        "2. subtraction \n"  +
+        "3. multiplication \n" ); 
+
+        var firstNum = prompt("first num: "); 
+        var secondNum = prompt ("secondNum: "); 
+        var result;
+
+        if (choice == 1) { 
+            result = parseInt(firstNum) + parseInt(secondNum)
+        }
+
+        else if (choice == 2) { 
+            result = firstNum - secondNum
+        } // \n means new line like brak in CSS
+
+         document.getElementById("showResult").innerHTML = "Arithmetic operation" + choice + "\n"
+         + "result is: " + result + "\n";
+
+
+        // how to convert string to another datatype
+
+        // parse - changing from one datatype to another; use parseInt
+
+        // b. confirm - to ask whether the user agrees or does not agree/ not 
+
+        if (confirm("Should I show the result? ")) { 
+            document.getElementById("showResult").innerHTML = "Arithmetic operation" + choice + "\n" 
+           + "result is: " + result;
+
+        }
+        else { 
+            document.getElementById("showResult").innerHTML = "no";
+        }
+    </script>
+</body>
+</html>
